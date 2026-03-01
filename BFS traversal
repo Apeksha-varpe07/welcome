@@ -1,0 +1,55 @@
+#include<stdio.h>
+#define MAX 100
+int adj[MAX][MAX];
+int n,q[20],visited[20],v,i,j,f=0,r=-1;
+void bfs(int v)
+{
+	for(i=1;i<n;i++)
+		if(adj[v][i]&&!visited[i])
+			q[++r]=i;
+	if(f<=r)
+			{
+			visited[q[f]]=1;
+			bfs(q[f++]);
+			}
+			
+}
+void main()
+{
+	int max_edges,origin,destin;
+	printf("\nDirected graph \n");
+	printf("\nENter number of vertices :");
+	scanf("%d",&n);
+	max_edges=n*(n-1);
+	for(i=0;i<=max_edges;i++)
+	{
+	printf("\nEnter edge[%d] (-1 -1 to quit) :",i);
+	scanf("%d %d",&origin,&destin);
+	if((origin==-1)&&(destin==-1))
+		break;
+	else
+	{
+		adj[origin][destin]=1;
+	}
+	}
+	printf("THe adjuncecy matrix is ::\n");
+	for(i=0;i<=n;i++)
+	{
+		for(j=0;j<=n;j++)
+		{
+			printf("%4d",adj[i][j]);
+		}
+		printf("\n");
+	}
+	printf("\nENter the starting vertex :");
+	scanf("%d",&v);
+	bfs(v);
+	printf("\nThe node which are reachable are :\n");
+	for(i=1;i<n;i++)
+		if(visited[i])
+			printf("%d\t",i);
+	        else
+			printf("\nbfs is not possible ");
+}
+
+
