@@ -1,0 +1,5 @@
+collection=set()
+collection.add("Apeksha")
+collection.add("Payal")
+collection.remove("Apeksha")
+print(collection)
