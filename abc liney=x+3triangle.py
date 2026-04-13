@@ -1,0 +1,8 @@
+A = Point(-1, 0) 
+B	= Point(2, -1) 
+C	= Point(1, 3) 
+T = Triangle(A, B, C) 
+P	= Point(0, 3) 
+Q	= Point(1, 4) 
+L = Line(P, Q) 
+T.reflect(L) 
