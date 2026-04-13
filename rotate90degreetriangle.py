@@ -1,0 +1,5 @@
+a=Point(1,-2) 
+b=Point(4,-6)
+c=Point(-1,4) 
+T=Triangle(a,b,c) 
+T.rotate(pi/2) 
