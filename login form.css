@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stylish Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background: white;
+            padding: 30px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+        }
+
+        input[type="reset"] {
+            background-color: #dc3545;
+            float: right;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Login Form</h2>
+
+    <form>
+        <label>Username</label>
+        <input type="text" placeholder="Enter Username" required>
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter Password" required>
+
+        <input type="submit" value="Login">
+        <input type="reset" value="Reset">
+    </form>
+</div>
+
+</body>
+</html>
