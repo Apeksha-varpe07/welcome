@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Dictionary</title>
+</head>
+<body>
+
+    <h2>Simple Dictionary</h2>
+
+    <input type="text" id="word" placeholder="Enter a word">
+    <button onclick="findMeaning()">Search</button>
+
+    <p id="result"></p>
+
+    <script>
+        const dictionary = {
+            html: "HyperText Markup Language",
+            css: "Cascading Style Sheets",
+            javascript: "Programming language for web development",
+            python: "A high-level programming language",
+            java: "Object-oriented programming language"
+        };
+
+        function findMeaning() {
+            let word = document.getElementById("word").value.toLowerCase();
+            let result = document.getElementById("result");
+
+            if (dictionary[word]) {
+                result.innerHTML = "<b>Meaning:</b> " + dictionary[word];
+            } else {
+                result.innerHTML = "Word not found.";
+            }
+        }
+    </script>
+
+</body>
+</html>
